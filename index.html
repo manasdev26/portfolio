@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="absolute">
+        <div class="absolute inset-0 justify-center">
+            <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
+            <div class="bg-shape2 bg-primary opacity-50 bg-blur"></div>
+            <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
+
+        </div>
+        <div class="heading">
+            <h1>I'm a <span class="auto-type"></span></h1>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed =new Typed(".auto-type",{
+            strings : ["Programmer","Designer","Web Developer","Manas Gupta"],
+            typeSpeed : 100,
+            backSpeed : 100,
+            looped : true,
+            onStringTyped: function(string) {
+                if (string === "Manas Gupta") {
+                  var heading = document.querySelector(".heading h1");
+                  heading.textContent = "I'm " + string;
+                }
+              }
+        })
+    </script>
+</body>
+</html>
